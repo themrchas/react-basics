@@ -26,3 +26,33 @@
 .card .card-text {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.button-container {
+
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0px
+
+}
+
+
+  .button-global {
+
+    background-color: hsl(200,100%, 50%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor:text
+
+  }
+
+  .list-example {
+
+    margin: 20px 0px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px hsla(0, 0%, 0%, .5);
+    padding: 20px 10px;
+
+  }
