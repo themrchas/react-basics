@@ -19,3 +19,5 @@ Currently, two official plugins are available:
 ### TypeCheck.jsx 
 - Demonstates the use of ***props*** type checking and assignning default values
 - Uses ***key*** to display a list 
+### Click1.jsx, Click2.jsx
+### BasicState.jsx

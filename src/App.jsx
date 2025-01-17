@@ -8,6 +8,17 @@ import Button3 from './Buttons/Button3.jsx'
 
 import TypeCheck from './TypeCheck.jsx'
 
+import Click1 from './Click1.jsx';
+import Click2 from './Click2.jsx';
+import BasicState from './BasicState.jsx'
+
+
+
+
+const click2Callback = _ => {
+  console.log("clikc2 callback worked")
+}
+
 
 
 function App() {
@@ -32,6 +43,10 @@ function App() {
       <h3>Example using TypeCheck propTypes and defaultProps</h3>
       <TypeCheck users={typeCheckUsers} />
     </div>
+
+    <Click1 />
+    <Click2 callBack={click2Callback} />
+    <BasicState />
 
      <Footer />
     </>
