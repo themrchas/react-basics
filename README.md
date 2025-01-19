@@ -19,5 +19,6 @@ Currently, two official plugins are available:
 ### TypeCheck.jsx 
 - Demonstates the use of ***props*** type checking and assignning default values
 - Uses ***key*** to display a list 
-### Click1.jsx, Click2.jsx
-### BasicState.jsx
+### Click1.jsx, Click2.jsxm click3.jsx - 
+### BasicState.js - basic use of how to use 'useState'; also shows a passing a event handler defined in a parent component
+### ObjectState.jsx - demonstrates how to use the spread operator to update a state object

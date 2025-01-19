@@ -14,12 +14,9 @@ export default function Click1() {
 
     }
 
-
-    
-
-
+ 
     const clickIt = (e) => {
-        console.log("You just clicked a button that has event handler in the component definition");
+       console.log("You just clicked a button that has event handler in the component definition");
         console.log("event is ",e);
         e.target.style.backgroundColor = generateRandomColor();
     }

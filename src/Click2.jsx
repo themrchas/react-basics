@@ -5,11 +5,11 @@ export default function Click2(props)  {
     let click2Style = {
 
         
-        color: "white",
+        color: "black",
         padding: "10px 20px",
         borderRadius: "5px",
         border: "none",
-        cursor: "text"
+        cursor: "pointer"
     };
 
     return (

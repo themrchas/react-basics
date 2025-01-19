@@ -30,6 +30,7 @@ export default function BasicState() {
 
     const [count,setCount] = useState(0);
 
+    //Note how we are provided the state of the previous variable via prevCount
     const incrementCount = _ => {
 
         setCount(prevCount => prevCount + 1)

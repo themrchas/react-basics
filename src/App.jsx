@@ -10,13 +10,20 @@ import TypeCheck from './TypeCheck.jsx'
 
 import Click1 from './Click1.jsx';
 import Click2 from './Click2.jsx';
+
+//Basic example of useState
 import BasicState from './BasicState.jsx'
+
+//Example of using the spread operator to update an object's state
+import ObjectState from './ObjectState.jsx'
+
+import Effects from './Effects.jsx'
 
 
 
 
 const click2Callback = _ => {
-  console.log("clikc2 callback worked")
+  console.log("Component fired a click handler defined in parent component.")
 }
 
 
@@ -45,8 +52,12 @@ function App() {
     </div>
 
     <Click1 />
-    <Click2 callBack={click2Callback} />
+    <Click2 callBack="click2Callback" />
     <BasicState />
+
+    <ObjectState />
+
+    <Effects />
 
      <Footer />
     </>
