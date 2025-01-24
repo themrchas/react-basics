@@ -17,6 +17,8 @@ import BasicState from './BasicState.jsx'
 //Example of using the spread operator to update an object's state
 import ObjectState from './ObjectState.jsx'
 
+import ArrayState from './ArrayState.jsx'
+
 import Effects from './Effects.jsx'
 
 
@@ -52,10 +54,12 @@ function App() {
     </div>
 
     <Click1 />
-    <Click2 callBack="click2Callback" />
+    <Click2 clickHandler={click2Callback} />
     <BasicState />
 
     <ObjectState />
+
+    <ArrayState />
 
     <Effects />
 

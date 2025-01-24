@@ -1,4 +1,4 @@
-import Readr, {useState} from 'react'
+import React, {useState} from 'react'
 
 export default function ObjectState() {
 
@@ -38,6 +38,8 @@ export default function ObjectState() {
     return(
 
         <div>
+
+            <h3>This demonstrates how to use the spread operator to update an object</h3>
 
             <div style={currentDetails}>
 

@@ -1,6 +1,6 @@
 export default function Click2(props)  {
 
-    const callBack = props.click2Callback;
+    const clickHandler = props.clickHandler;
 
     let click2Style = {
 
@@ -13,7 +13,7 @@ export default function Click2(props)  {
     };
 
     return (
-        <button style={click2Style} onClick={callBack} type="button">Click Me</button>
+        <button style={click2Style} onClick={clickHandler} type="button">Click2 Me</button>
     )
 
 

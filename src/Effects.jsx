@@ -22,16 +22,21 @@ export default function Effects() {
     
 
 
-
-    useEffect(() => {"The component was just mounted."}, []);
+    //Fires when a component is mounted
+    useEffect(() => { console.log("The component was just mounted.")}, []);
 
     const buttonClickHandler = ((evt) => {
        
             let newValue = Math.floor(Math.random() * 101);
 
-            setCount(prevCount => newValue)
+            let prevDisplayedValue;
 
-            if (newValue > prevCount) {
+            setCount(prevCount => {
+                                    prevDisplayedValue = prevCount;
+                                    return newValue
+                                  })
+
+            if (newValue > prevDisplayedValue) {
                 setButtonColor("#90EE90")
             }
             else {
@@ -41,6 +46,7 @@ export default function Effects() {
       
     })
 
+        //Fires on mount and when value changes
         useEffect( _ => {
 
             console.log("Component has been mounted or the state of 'buttonColor' has changed.")
@@ -48,7 +54,7 @@ export default function Effects() {
         }, [buttonColor])
 
 
-
+        //Fires after every re-render.
         useEffect( _ => console.log('Component re-rendered'));
 
     
