@@ -1,3 +1,5 @@
+import {createContext,useState} from 'react'
+
 import Header from './Header.jsx'
 import Footer from './Footer.jsx'
 import Card from './Card.jsx'
@@ -19,7 +21,13 @@ import ObjectState from './ObjectState.jsx'
 
 import ArrayState from './ArrayState.jsx'
 
-import Effects from './Effects.jsx'
+import Effects from './Effects.jsx';
+
+import ContextA from './ContextA.jsx'
+
+import RefComponent from './RefComponent.jsx'
+
+export const TestContext = createContext();
 
 
 
@@ -29,9 +37,10 @@ const click2Callback = _ => {
 }
 
 
-
 function App() {
   //const [count, setCount] = useState(0)
+
+  const [contextValue,setContextValue] = useState("tornado");
 
   const typeCheckUsers = [{name:"Beavis",age:15,hobby:"Collecting beer cans"},{name:"Mr. Johnson",age:64,hobby:"Telling war stories"}]
 
@@ -62,6 +71,13 @@ function App() {
     <ArrayState />
 
     <Effects />
+
+    <h2>Avoid 'props drilling' useContext Example: sending value {contextValue} to immediate child</h2>
+    <TestContext.Provider value={contextValue}>
+      <ContextA storm={contextValue}/>
+    </TestContext.Provider>
+
+    <RefComponent />
 
      <Footer />
     </>
