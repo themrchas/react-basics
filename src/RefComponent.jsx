@@ -1,8 +1,11 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 export default function RefComponent() {
 
     const catName = useRef("Casper");
+    const inputRef = useRef("");
+
+    const [valInput, setValInput] = useState("");
 
     const componentCss = {
 
@@ -23,6 +26,13 @@ export default function RefComponent() {
         document.getElementById("inputCatName").value = "";
     }
 
+    const handleButtonClick = () => {
+
+        let newInputValue = inputRef.current.value
+        setValInput(_ => newInputValue);
+        inputRef.current.value = "";
+    }
+
     return (
 
         <div>
@@ -34,6 +44,12 @@ export default function RefComponent() {
                 <button type="button" onClick={updateCatName}>Update cat name</button>
             </div>
             <div id="message" style={componentCss.message}>The value of 'catName' does not change because the component is not rendering!</div>
+            
+            <h3>You can use useRef to access a tag's properties</h3><div style={componentCss.controls}>
+                <input ref={inputRef}></input>
+                <button onClick={handleButtonClick}>Update input</button>
+            </div>
+            <h3>Current value of the input is {valInput}</h3>
         </div>
 
     )

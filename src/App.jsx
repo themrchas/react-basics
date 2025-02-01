@@ -27,6 +27,12 @@ import ContextA from './ContextA.jsx'
 
 import RefComponent from './RefComponent.jsx'
 
+import { RefHtmlElement } from './RefHtmlElement.jsx'
+
+import EffectREST from './EffectREST.jsx'
+
+import Reducer from './Reducer.jsx';
+
 export const TestContext = createContext();
 
 
@@ -78,6 +84,11 @@ function App() {
     </TestContext.Provider>
 
     <RefComponent />
+    <RefHtmlElement />
+
+    <EffectREST />
+
+    <Reducer />
 
      <Footer />
     </>
