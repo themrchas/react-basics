@@ -33,6 +33,10 @@ import EffectREST from './EffectREST.jsx'
 
 import Reducer from './Reducer.jsx';
 
+import UseImperativeHandle from './UseImperativeHandle.jsx';
+
+import { LayoutEffect } from './LayoutEffect.jsx'
+
 export const TestContext = createContext();
 
 
@@ -89,6 +93,10 @@ function App() {
     <EffectREST />
 
     <Reducer />
+
+    <UseImperativeHandle />
+
+    <LayoutEffect />
 
      <Footer />
     </>
